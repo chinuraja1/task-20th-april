@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 20apl</title>
+</head>
+<body>
+    <script>
+        let txt=document.createElement("input");
+        txt.setAttribute("id","txt");
+        let txt1=document.createElement("input");
+        txt1.setAttribute("id","txt1");
+        let txt2=document.createElement("input");
+        txt2.setAttribute("id","txt2");
+
+        let btn=document.createElement("button");
+        btn.setAttribute("id","btn");
+        let x=document.createElement("input");
+        x.setAttribute("id","x")
+
+        txt.innerHTML="";
+        txt1.innerHTML="";
+        txt2.innerHTML="";
+        x.innerHTML="";
+        btn.innerHTML="click";
+
+        document.body.appendChild(txt);
+        document.body.appendChild(txt1);
+        document.body.appendChild(txt2);
+        document.body.appendChild(btn);
+        btn.addEventListener("click",()=>{
+            var txt=document.getElementById("txt").value;
+            var txt1=document.getElementById("txt1").value;
+            var txt2=document.getElementById("txt2").value;
+
+            if(txt=="" || txt1=="" || txt2=="")
+            {
+                alert("not empty");
+            }
+            else{
+                document.body.appendChild(x);
+            
+                console.log(txt+txt1+txt2);
+            }
+        });
+        
+    </script>
+</body>
+</html>
